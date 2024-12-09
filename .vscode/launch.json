@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "mi_primera_app",
+            "request": "launch",
+            "type": "dart",
+        },
+        {
+            "name": "mi_primera_app (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+        },
+        {
+            "name": "mi_primera_app (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+        }
+    ]
+}
