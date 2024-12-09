@@ -1,12 +1,12 @@
 # Comandos básicos de Flutter
 
-flutter run
-flutter upgrade --Actualiza a la última versión de flutter
-flutter --version
-flutter devices -- Indica todos los dispositivos listos para ser ejecutados (ya creados)
+- `flutter run`  
+- `flutter upgrade` -- Actualiza a la última versión de Flutter  
+- `flutter --version`  
+- `flutter devices` -- Indica todos los dispositivos listos para ser ejecutados (ya creados)  
 
-flutter build apk --release
-flutter build appbundle
+- `flutter build apk --release`  
+- `flutter build appbundle`
 
 -----------------------------------------------------------------------------------------
 
