@@ -10,6 +10,8 @@ flutter build appbundle
 
 -----------------------------------------------------------------------------------------
 
+# Web para dependencias de Flutter
+
 https://pub.dev/
 
 flutter pub get -- Para refrescar flutter y poder generar la nueva dependencia (Packages)
@@ -18,6 +20,7 @@ flutter pub get -- Para refrescar flutter y poder generar la nueva dependencia (
 
 https://idx.dev/
 
+## Interfaz
 
 ## Caracteristicas del proyecto
 
@@ -32,19 +35,18 @@ https://idx.dev/
 -Persistencia en remoto (v3: Firebase)
 
 
-## Interfaz
-
 -Pantalla principal
 -Pantalla agregar habito
 -Pantalla historial
 
 ## TIPS 
 
+// Mini Proyecto 1 - Lista de Hábitos
+
 //Parte1
 - STL pasarlo a STF - OK
 - ListView.builder - OK
-
-- ListTile (utilizar los valores de la lista - habits)
+- ListTile (utilizar los valores de la lista - habits) OK
 
 //Parte2
 
