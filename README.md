@@ -1,12 +1,16 @@
-flutter run
-flutter upgrade --Actualiza a la última versión de flutter
-flutter --version
-flutter devices -- Indica todos los dispositivos listos para ser ejecutados (ya creados)
+# Comandos básicos de Flutter
 
-flutter build apk --release
-flutter build appbundle
+- `flutter run`  
+- `flutter upgrade` -- Actualiza a la última versión de Flutter  
+- `flutter --version`  
+- `flutter devices` -- Indica todos los dispositivos listos para ser ejecutados (ya creados)  
+
+- `flutter build apk --release`  
+- `flutter build appbundle`
 
 -----------------------------------------------------------------------------------------
+
+# Web para dependencias de Flutter
 
 https://pub.dev/
 
@@ -16,6 +20,7 @@ flutter pub get -- Para refrescar flutter y poder generar la nueva dependencia (
 
 https://idx.dev/
 
+## Interfaz
 
 ## Caracteristicas del proyecto
 
@@ -30,19 +35,18 @@ https://idx.dev/
 -Persistencia en remoto (v3: Firebase)
 
 
-## Interfaz
-
 -Pantalla principal
 -Pantalla agregar habito
 -Pantalla historial
 
 ## TIPS 
 
+// Mini Proyecto 1 - Lista de Hábitos
+
 //Parte1
 - STL pasarlo a STF - OK
 - ListView.builder - OK
-
-- ListTile (utilizar los valores de la lista - habits)
+- ListTile (utilizar los valores de la lista - habits) OK
 
 //Parte2
 
