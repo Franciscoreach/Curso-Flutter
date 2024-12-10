@@ -1,5 +1,8 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:mi_primera_app/gestor-habitos/new__habit.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeHabitosPage extends StatefulWidget {
 
@@ -8,14 +11,38 @@ class HomeHabitosPage extends StatefulWidget {
   @override
   State<HomeHabitosPage> createState() => _HomeHabitosPageState();
 }
-  //Escritura de datos
-  //Lectura de datos
-  // initState --> Leer si tenemos informacion almacenada
-
 
 
 class _HomeHabitosPageState extends State<HomeHabitosPage> {
   final List<Habit> habits = [];
+  late final SharedPreferences prefs;
+  String? action;
+
+  //Escritura de datos
+  //Lectura de datos
+  // initState --> Leer si tenemos informacion almacenada
+  @override
+  void initState(){
+    super.initState();
+    initShared();
+  }
+
+  initShared() async {
+    prefs = await SharedPreferences.getInstance();
+    getData();
+  }
+
+  saveData() async {
+    await prefs.setString('test', 'Test 1');
+    getData();
+  }
+
+  getData(){
+    setState(() {
+      action = prefs.getString('test') ?? "Sin data";
+    });
+    log(action!);
+  }
 
   void _addHabit(String name, String desc) {
     setState(() {
@@ -33,7 +60,7 @@ class _HomeHabitosPageState extends State<HomeHabitosPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Gestor de habitos"),
+        title: Text("Gestor de habitos ($action)"),
       ),
       body: ListView.builder(
         itemCount: habits.length,
@@ -57,18 +84,32 @@ class _HomeHabitosPageState extends State<HomeHabitosPage> {
           );
         },
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => NewHabit(
-                submitHabit: _addHabit,
-              ),
-            ),
-          );
-        },
-        child: const Icon(Icons.add),
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+          heroTag: "floating-1",
+          onPressed: () {
+            saveData();
+          },
+          child: const Icon(Icons.save),
+          ),
+          const SizedBox(height: 8),
+          FloatingActionButton(
+              heroTag: "floating.2",
+              onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => NewHabit(
+                    submitHabit: _addHabit,
+                  ),
+                ),
+              );
+            },
+            child: const Icon(Icons.add),
+          ),
+        ],
       ),
     );
   }

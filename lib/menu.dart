@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mi_primera_app/entradas_de_datos/in_datos.dart';
+import 'package:mi_primera_app/galeria_imagenes/galeria_imagenes.dart';
 import 'package:mi_primera_app/gestor-habitos/home-hab.dart';
 
 class Menu extends StatelessWidget {
@@ -16,16 +18,36 @@ class Menu extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => HomeHabitosPage(),
+                  builder: (context) => const HomeHabitosPage(),
             ),
           );
         },
           child: const Text("Gestor de Habitos")
         ),
-        ElevatedButton(onPressed: (){},
-          child: const Text("Galeria de Imagenes")
+        ElevatedButton(
+          onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const InDatos(),
+            ),
+          );
+        },
+          child: const Text("Widgets de entrada de datos")
         ),
-        ElevatedButton(onPressed: (){},
+        ElevatedButton(
+          onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const GaleriaImagenes(),
+            ),
+          );
+        },
+          child: const Text("Galeria de imagenes")
+        ),
+        ElevatedButton(
+          onPressed: (){},
           child: const Text("Reproductor de Audio")
         ),
         ElevatedButton(onPressed: (){},
