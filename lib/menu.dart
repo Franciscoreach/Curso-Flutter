@@ -40,7 +40,7 @@ class Menu extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => const GaleriaImagenes(),
+                  builder: (context) => GaleriaImagenes(),
             ),
           );
         },
