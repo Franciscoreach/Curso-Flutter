@@ -14,6 +14,12 @@
 
 https://pub.dev/
 
+
+# Web para diseños
+
+https://lottiefiles.com/
+https://dribbble.com/
+
 flutter pub get -- Para refrescar flutter y poder generar la nueva dependencia (Packages)
 
 # Emular flutter de forma web
@@ -47,7 +53,5 @@ https://idx.dev/
 - STL pasarlo a STF - OK
 - ListView.builder - OK
 - ListTile (utilizar los valores de la lista - habits) OK
-
-//Parte2
 
 
