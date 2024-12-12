@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mi_primera_app/audio_player/audio_player.dart';
+import 'package:mi_primera_app/audio_player/audio_playerV2.dart';
 import 'package:mi_primera_app/entradas_de_datos/in_datos.dart';
 import 'package:mi_primera_app/galeria_imagenes/galeria_imagenes.dart';
 import 'package:mi_primera_app/gestor-habitos/home-hab.dart';
@@ -52,7 +52,7 @@ class Menu extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => const AudioPlayerPage(),
+                  builder: (context) => const AudioPlayerV2(),
             ),
           );
           },
