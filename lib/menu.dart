@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mi_primera_app/audio_player/audio_player.dart';
+import 'package:mi_primera_app/audio_player/audio_player2.dart';
 import 'package:mi_primera_app/audio_player/audio_playerV2.dart';
 import 'package:mi_primera_app/entradas_de_datos/in_datos.dart';
 import 'package:mi_primera_app/galeria_imagenes/galeria_imagenes.dart';
@@ -52,11 +54,22 @@ class Menu extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => const AudioPlayerV2(),
+                  builder: (context) => const AudioPlayerPage(),
             ),
           );
           },
           child: const Text("Reproductor de Audio")
+        ),
+        ElevatedButton(
+          onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const AudioPlayer25(),
+            ),
+          );
+          },
+          child: const Text("Movie Streaming")
         ),
         ElevatedButton(onPressed: (){},
           child: const Text("Todo - Provider")
