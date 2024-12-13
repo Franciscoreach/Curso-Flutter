@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mi_primera_app/audio_player/audio_player2_5.dart';
 
 class AudioPlayer25 extends StatefulWidget {
   const AudioPlayer25({super.key});
@@ -219,7 +220,7 @@ class AlbumPlayer extends StatelessWidget {
           child: Container(
             width: size.width,
             height: height - 140,
-            child: carruselImages(),
+            child: carruselImages(context),
           ),
         ),
         Positioned(
@@ -310,7 +311,7 @@ class AlbumPlayer extends StatelessWidget {
   }
 
 
-  Widget carruselImages(){
+  Widget carruselImages(context){
     return Container(
       padding: const EdgeInsets.only(
         top: 16,
@@ -364,9 +365,15 @@ class AlbumPlayer extends StatelessWidget {
             bottom: 30,
             left: 45,
             right: 45,
+            child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AudioPlayer251()),
+              );
+            },
             child: Container(
               decoration: BoxDecoration(
-                //color: Colors.white,
                 image: const DecorationImage(
                   image: AssetImage("assets/img/ado.jpg"),
                   fit: BoxFit.cover,
@@ -375,10 +382,11 @@ class AlbumPlayer extends StatelessWidget {
               ),
             ),
           ),
-        ],
-      ),
-    );
-  }
+        ),
+      ],
+    ),
+  );
+}
 
 }
 
@@ -413,7 +421,7 @@ class ContinueWatching extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
-                    fontWeight: FontWeight.bold, // Aplica negrita
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 ],
