@@ -130,7 +130,7 @@ class AppBarPlayer extends StatelessWidget {
                         shape: BoxShape.circle,
                       ),
                       child: const Icon(
-                        Icons.notifications,
+                        Icons.notifications_none,
                         color: Colors.white,
                         size: 30,
                       ),

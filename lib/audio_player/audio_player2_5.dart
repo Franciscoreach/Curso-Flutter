@@ -52,7 +52,7 @@ class _AudioPlayer251State extends State<AudioPlayer251> {
       child: Column(
         children: [
           //Bajando los Iconos - Appbar
-          const SizedBox(height: 45),
+          const SizedBox(height: 50),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
