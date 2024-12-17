@@ -1,0 +1,41 @@
+// import 'package:flutter/material.dart';
+// import 'package:provider/provider.dart';
+
+// //Primero
+// class CounterProvider extends ChangeNotifier{
+//   int counter = 0;
+
+//   increment(){
+//     counter++;
+//     notifyListeners();
+//   }
+// }
+
+// class ToDoProvider extends StatelessWidget {
+//   const ToDoProvider({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: const Text("Todo Provider"),
+//       ),
+//       body: Center(
+//         //Especifico al consumer la clase
+//         child: Consumer<CounterProvider>(
+//           //counterProvider le podamos dar el nombre nosotros y acceder despues a la variables
+//           builder: (context, counterProvider, child) {
+//             return Text("Contador: ${counterProvider.counter}");
+//           }
+//         ),
+//       ),
+//       floatingActionButton: FloatingActionButton(
+//         onPressed: (){
+//           //Especificamos el tipo de instancia al leer el context "<CounterProvider>"
+//           context.read<CounterProvider>().increment();
+//         },
+//         child: Icon(Icons.add),
+//         ),
+//     );
+//   }
+// }

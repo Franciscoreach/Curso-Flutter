@@ -5,6 +5,9 @@ import 'package:mi_primera_app/audio_player/audio_player2.dart';
 import 'package:mi_primera_app/entradas_de_datos/in_datos.dart';
 import 'package:mi_primera_app/galeria_imagenes/galeria_imagenes.dart';
 import 'package:mi_primera_app/gestor-habitos/home-hab.dart';
+import 'package:mi_primera_app/todo_bloc/todo_bloc2.dart';
+import 'package:mi_primera_app/todo_bloc/todo_bloc1.dart';
+import 'package:mi_primera_app/todo_provider/todo_provider.dart';
 
 class Menu extends StatelessWidget {
   const Menu({super.key});
@@ -71,11 +74,38 @@ class Menu extends StatelessWidget {
           },
           child: const Text("Movie Streaming")
         ),
-        ElevatedButton(onPressed: (){},
+        ElevatedButton(
+          onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const ToDoProvider(),
+            ),
+          );
+          },
           child: const Text("Todo - Provider")
         ),
-        ElevatedButton(onPressed: (){},
+        ElevatedButton(
+          onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const TodoBloc(),
+            ),
+          );
+          },
           child: const Text("Todo - Bloc")
+        ),
+        ElevatedButton(
+          onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const TodoBloc2(),
+            ),
+          );
+          },
+          child: const Text("Todo - Bloc Provider")
         ),
         ],
         ),
