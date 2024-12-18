@@ -11,12 +11,15 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(
-    //Se cambio para poder usar Provider 
-    ChangeNotifierProvider(
-      create: (_) => TaskProvider(),
-      child: const MaterialApp(
+    const MaterialApp(
       home: Menu(),
-      ),
     ),
+    //Se cambio para poder usar Provider 
+    // ChangeNotifierProvider(
+    //   create: (_) => TaskProvider(),
+    //   child: const MaterialApp(
+    //   home: Menu(),
+    //   ),
+    // ),
   );
 }

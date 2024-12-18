@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mi_primera_app/adopt_app/adopt_app.dart';
 import 'package:mi_primera_app/audio_player/audio_player.dart';
 import 'package:mi_primera_app/audio_player/audio_player2.dart';
 //import 'package:mi_primera_app/audio_player/audio_playerV2.dart';
@@ -106,6 +107,17 @@ class Menu extends StatelessWidget {
           );
           },
           child: const Text("Todo - Bloc Provider")
+        ),
+        ElevatedButton(
+          onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const AdoptAppPage(),
+            ),
+          );
+          },
+          child: const Text("Adopt App")
         ),
         ],
         ),
